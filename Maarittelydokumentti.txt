@@ -1,0 +1,10 @@
+Määrittelydokumentti:
+
+Vertailen kolmea järjestämisalgoritmia.
+1. Algoritmi on Insertion Sort. Insertion Sortin aikavaativuuden tulisi optimaalisesti olla O(n^2) ja tilavaativuuden O(1).
+2. Algoritmi on Heap sort. Heap sortin aikavaativuuden tulisi optimaalisesti olla O(n log n). Tarkistan tilan myöhemmin.
+3. En ole vielä päättänyt kolmatta.
+
+Lähteet:
+Insertion Sort		http://en.wikipedia.org/wiki/Insertion_sort
+Heap sort		http://en.wikipedia.org/wiki/Heap_sort
