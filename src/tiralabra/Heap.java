@@ -21,14 +21,15 @@ public class Heap {
     
     public void buildHeap(int[] array) {
         heapsize = array.length;
-        for (int i = array.length/2; i > 0; i--) {
+        heap = array;
+        for (int i = array.length/2; i >= 0; i--) {
             heapify(i);
         }
     }
     
-    public void printHeap(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
+    public void printHeap() {
+        while (heapsize > 0) {
+            System.out.println(heapDelMin());
         }
     }
     
@@ -57,20 +58,20 @@ public class Heap {
     public void heapify(int i) {
         int l = leftChild(i);
         int r = rightChild(i);
-        int largest;
-        if (r <= heapsize) {
-            if (heap[l] > heap[r]) {
-                largest = l;
+        int smallest;
+        if (r <= heapsize-1) {
+            if (heap[l] < heap[r]) {
+                smallest = l;
             } else {
-                largest = r;
+                smallest = r;
             }
-            if (heap[i] < heap[largest]) {
+            if (heap[i] > heap[smallest]) {
                 int temp = heap[i];
-                heap[i] = heap[largest];
-                heap[largest] = temp;
-                heapify(largest);
+                heap[i] = heap[smallest];
+                heap[smallest] = temp;
+                heapify(smallest);
             }
-        } else if (l == heapsize && heap[i] < heap[l]) {
+        } else if (l == heapsize-1 && heap[i] > heap[l]) {
             int temp = heap[i];
             heap[i] = heap[l];
             heap[l] = temp;
@@ -83,7 +84,7 @@ public class Heap {
     
     public int heapDelMin() {
         int min = heap[0];
-        heap[0] = heap[heapsize];
+        heap[0] = heap[heapsize-1];
         heapsize--;
         heapify(0);
         return min;
