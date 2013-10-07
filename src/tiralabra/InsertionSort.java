@@ -3,6 +3,7 @@ package tiralabra;
 
 import java.util.Random;
 
+//todo: poista "yleiset" metodit, vaihda ne arrayoperations luokkaan
 public class InsertionSort {
     private int[] array;
     

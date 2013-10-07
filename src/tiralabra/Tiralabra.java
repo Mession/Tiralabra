@@ -3,6 +3,7 @@ package tiralabra;
 
 public class Tiralabra {
 
+    //todo: demoa varten valmiiksi
     public static void main(String[] args) {
         //final long startTime = System.nanoTime();
         int[] testi = new int[]{3, 4, 2, 1, 5};
