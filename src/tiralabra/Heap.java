@@ -19,12 +19,17 @@ public class Heap {
         return heap;
     }
     
-    public void buildHeap(int[] array) {
-        heapsize = array.length;
-        heap = array;
-        for (int i = array.length/2; i >= 0; i--) {
+    public int[] buildHeap(int[] array) {
+        int[] temp = array.clone();
+        heapsize = temp.length;
+        heap = temp;
+        for (int i = temp.length/2; i >= 0; i--) {
             heapify(i);
         }
+        for (int i = 0; i < array.length; i++) {
+            array[i] = heapDelMin();
+        }
+        return array;
     }
     
     public void printHeap() {

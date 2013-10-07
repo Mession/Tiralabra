@@ -48,10 +48,10 @@ public class InsertionSort {
     }
     
     public void insertionSort() {
-        insertionSort(this.array);
+        sort(this.array);
     }
     
-    public void insertionSort(int[] array) {
+    public int[] sort(int[] array) {
         for (int i = 1; i < array.length; i++) {
             int valueAtIndex = array[i];
             int index = i;
@@ -63,6 +63,7 @@ public class InsertionSort {
             
             array[index] = valueAtIndex;
         }
+        return array;
     }
     
     public void printArray() {
