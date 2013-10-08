@@ -1,9 +1,10 @@
 
 package tiralabra;
 
+import java.util.Stack;
+
 public class QuickSort {
     
-    // todo: poista häntärekursio, vaihda jakoalkio kolmen mediaaniksi tjsp
     public int[] quicksort(int[] array, int left, int right) {
         if (left < right) {
             int p = partition(array, left, right);
@@ -13,15 +14,24 @@ public class QuickSort {
         return array;
     }
     
-    public int[] quicksortIterative(int[] array, int left, int right) {
+    public int[] iterative(int[] array, int left, int right) {
         while (left < right) {
             int p = partition(array, left, right);
-            if (p - left < right - p) {
-                quicksortIterative(array, left, right);
+            iterative(array, left, p);
+            left = p+1;
+        }
+        return array;
+    }
+    
+    public int[] iterative2(int[] array, int left, int right) {
+        while (left < right) {
+            int p = partition(array, left, right);
+            if ((p - left) < (right - p)) {
+                iterative2(array, left, p);
                 left = p+1;
             } else {
-                quicksortIterative(array, p+1, right);
-                left = p;
+                iterative2(array, p+1, right);
+                right = p;
             }
         }
         return array;
@@ -47,7 +57,6 @@ public class QuickSort {
             } else {
                 return j;
             }
-            //return j;
         }
         return j;
     }

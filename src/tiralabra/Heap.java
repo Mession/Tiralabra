@@ -5,47 +5,16 @@ public class Heap {
     private int[] heap;
     private int heapsize;
     
-    public Heap(int[] array) {
-        this.heap = array;
-        heapsize = array.length-1;
-    }
-    
-    public Heap() {
-        this.heap = new int[100];
-        heapsize = 0;
-    }
-    
-    public int[] getHeap() {
-        return heap;
-    }
-    
     public int[] buildHeap(int[] array) {
-        int[] temp = array.clone();
-        heapsize = temp.length;
-        heap = temp;
-        for (int i = temp.length/2; i >= 0; i--) {
+        heapsize = array.length;
+        heap = array;
+        for (int i = array.length/2; i >= 0; i--) {
             heapify(i);
         }
         for (int i = 0; i < array.length; i++) {
             array[i] = heapDelMin();
         }
         return array;
-    }
-    
-    public void printHeap() {
-        while (heapsize > 0) {
-            System.out.println(heapDelMin());
-        }
-    }
-    
-    public void insert(int k) {
-        heapsize++;
-        int i = heapsize;
-        while (i > 1 && heap[parent(i)] < k) {
-            heap[i] = heap[parent(i)];
-            i = parent(i);
-        }
-        heap[i] = k;
     }
     
     public int parent(int i) {
@@ -81,10 +50,6 @@ public class Heap {
             heap[i] = heap[l];
             heap[l] = temp;
         }
-    }
-    
-    public int heapmin() {
-        return heap[0];
     }
     
     public int heapDelMin() {
