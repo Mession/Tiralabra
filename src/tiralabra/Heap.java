@@ -5,16 +5,26 @@ public class Heap {
     private int[] heap;
     private int heapsize;
     
-    public int[] buildHeap(int[] array) {
+    public int[] heapSort(int[] array) {
+        buildHeap(array);
+        for (int i = array.length-1; i > 0; i--) {
+            int temp = heap[0];
+            heap[0] = heap[i];
+            heap[i] = temp;
+            heapsize--;
+            //heapify(0);
+            heapifyIterative(0);
+        }
+        return array;
+    }
+    
+    public void buildHeap(int[] array) {
         heapsize = array.length;
         heap = array;
         for (int i = array.length/2; i >= 0; i--) {
-            heapify(i);
+            //heapify(i);
+            heapifyIterative(i);
         }
-        for (int i = 0; i < array.length; i++) {
-            array[i] = heapDelMin();
-        }
-        return array;
     }
     
     public int parent(int i) {
@@ -29,34 +39,59 @@ public class Heap {
         return 2*i+1;
     }
     
+    public void heapifyIterative(int i) {
+        int l = leftChild(i);
+        int r = rightChild(i);
+        int largest;
+        while (l <= heapsize-1) {
+            largest = i;
+            if (heap[l] > heap[i]) {
+                largest = l;
+            } else if (r <= heapsize-1 && heap[r] > heap[largest]) {
+                largest = r;
+            }
+            if (largest != i) {
+                int temp = heap[i];
+                heap[i] = heap[largest];
+                heap[largest] = temp;
+                i = largest;
+                l = leftChild(i);
+                r = rightChild(i);
+            } else {
+                break;
+            }
+        }
+    }
+       
     public void heapify(int i) {
         int l = leftChild(i);
         int r = rightChild(i);
-        int smallest;
+        int largest;
         if (r <= heapsize-1) {
-            if (heap[l] < heap[r]) {
-                smallest = l;
+            if (heap[l] > heap[r]) {
+                largest = l;
             } else {
-                smallest = r;
+                largest = r;
             }
-            if (heap[i] > heap[smallest]) {
+            if (heap[i] < heap[largest]) {
                 int temp = heap[i];
-                heap[i] = heap[smallest];
-                heap[smallest] = temp;
-                heapify(smallest);
+                heap[i] = heap[largest];
+                heap[largest] = temp;
+                heapify(largest);
             }
-        } else if (l == heapsize-1 && heap[i] > heap[l]) {
+        } else if (l == heapsize-1 && heap[i] < heap[l]) {
             int temp = heap[i];
             heap[i] = heap[l];
             heap[l] = temp;
         }
     }
     
-    public int heapDelMin() {
-        int min = heap[0];
+    public int heapDelMax() {
+        int max = heap[0];
         heap[0] = heap[heapsize-1];
         heapsize--;
-        heapify(0);
-        return min;
+        //heapify(0);
+        heapifyIterative(0);
+        return max;
     }
 }

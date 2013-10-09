@@ -15,7 +15,14 @@ public class Tiralabra {
         long startTime;
         long duration;
         
-        /* EKA DEMO: TOIMIIKO JÄRJESTÄMISET
+        // Insertion sort eli Lisäysjärjestäminen, aika keskimäärin O(n^2), pahin O(n^2), paras O(n), tila O(1)
+        // Paras pienillä taulukoilla
+        // Heapsort eli Kekojärjestäminen, aika keskimäärin O(n log n), pahin O(n log n), paras O(n log n), O(1)
+        // Hyvä, jos tarvitaan järjestämisalgoritmi, joka toimii vakiotilassa
+        // Quicksort eli Pikajärjestäminen, aika keskimäärin O(n log n), pahin O(n^2), paras O(n log n), tila O(log n)
+        // Paras keskimäärin, koska pienet vakiokertoimet ja pahin tapaus harvinainen (jos hyvä jakoalkio)
+        
+        ///* EKA DEMO: TOIMIIKO JÄRJESTÄMISET
         
         //Aluksi demot jokaisella, että järjestävät testitaulukon
         int[] testi = new int[]{3, 5, 2, 1, 4};
@@ -42,7 +49,7 @@ public class Tiralabra {
         System.out.println("Heap sort\nEnnen järjestämistä:");
         ao.printArray(testi);
         startTime = System.currentTimeMillis();
-        hp.buildHeap(testi);
+        hp.heapSort(testi);
         duration = System.currentTimeMillis() - startTime;
         System.out.println("\nHeap sortin jälkeen:");
         ao.printArray(testi);
@@ -71,7 +78,7 @@ public class Tiralabra {
         s.next();
         //QS end
         
-        */
+        //*/
         
         /* TOKA DEMO: RANDOM 100 000 ALKION TAULUKKO
         
@@ -95,7 +102,7 @@ public class Tiralabra {
         random = ao.initialiseRandomArray(100000, 10000);
         System.out.println("Heap sort");
         startTime = System.currentTimeMillis();
-        hp.buildHeap(random);
+        hp.heapSort(random);
         duration = System.currentTimeMillis() - startTime;
         if (duration < 10000) {
             System.out.println("Taulukon järjestäminen kesti " + duration + " millisekuntia\n\n");
@@ -143,7 +150,7 @@ public class Tiralabra {
         ordered = ao.initialiseOrderedArray(100000);
         System.out.println("Heap sort");
         startTime = System.currentTimeMillis();
-        hp.buildHeap(ordered);
+        hp.heapSort(ordered);
         duration = System.currentTimeMillis() - startTime;
         if (duration < 10000) {
             System.out.println("Taulukon järjestäminen kesti " + duration + " millisekuntia\n\n");
@@ -192,7 +199,7 @@ public class Tiralabra {
         reverse = ao.reverseOrderArray(100000);
         System.out.println("Heap sort");
         startTime = System.currentTimeMillis();
-        hp.buildHeap(reverse);
+        hp.heapSort(reverse);
         duration = System.currentTimeMillis() - startTime;
         if (duration < 10000) {
             System.out.println("Taulukon järjestäminen kesti " + duration + " millisekuntia\n\n");
