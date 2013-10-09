@@ -47,7 +47,8 @@ public class Heap {
             largest = i;
             if (heap[l] > heap[i]) {
                 largest = l;
-            } else if (r <= heapsize-1 && heap[r] > heap[largest]) {
+            }
+            if (r <= heapsize-1 && heap[r] > heap[largest]) {
                 largest = r;
             }
             if (largest != i) {
@@ -58,7 +59,9 @@ public class Heap {
                 l = leftChild(i);
                 r = rightChild(i);
             } else {
-                break;
+                i = heapsize;
+                l = leftChild(i);
+                r = rightChild(i);
             }
         }
     }
