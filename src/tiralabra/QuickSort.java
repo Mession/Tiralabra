@@ -1,8 +1,6 @@
 
 package tiralabra;
 
-import java.util.Stack;
-
 public class QuickSort {
     
     public int[] quicksort(int[] array, int left, int right) {

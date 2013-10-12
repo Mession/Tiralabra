@@ -5,8 +5,6 @@ import java.util.Random;
 
 public class ArrayOperations {
     
-    
-    
     public void put(int index, int value, int[] array) {
         array[index] = value;
     }

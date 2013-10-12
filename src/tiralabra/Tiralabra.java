@@ -15,6 +15,17 @@ public class Tiralabra {
         long startTime;
         long duration;
         
+        OptimizedSort os = new OptimizedSort();
+        int[] testi = ao.initialiseRandomArray(100000, 100000);
+        startTime = System.currentTimeMillis();
+        os.quicksort(testi, 0, testi.length-1);
+        duration = System.currentTimeMillis() - startTime;
+        if (duration < 10000) {
+            System.out.println("Taulukon järjestäminen kesti " + duration + " millisekuntia\n\n");
+        } else {
+            System.out.println("Taulukon järjestäminen kesti " + duration/1000 + " sekuntia\n\n");
+        }
+        
         // Insertion sort eli Lisäysjärjestäminen, aika keskimäärin O(n^2), pahin O(n^2), paras O(n), tila O(1)
         // Paras pienillä tai melkein järjestyksessä olevilla taulukoilla
         // Heapsort eli Kekojärjestäminen, aika keskimäärin O(n log n), pahin O(n log n), paras O(n log n), O(1)
@@ -90,6 +101,7 @@ public class Tiralabra {
         startTime = System.currentTimeMillis();
         is.sort(random);
         duration = System.currentTimeMillis() - startTime;
+        ao.printArray(random);
         if (duration < 10000) {
             System.out.println("Taulukon järjestäminen kesti " + duration + " millisekuntia\n\n");
         } else {
@@ -104,6 +116,7 @@ public class Tiralabra {
         startTime = System.currentTimeMillis();
         hp.heapSort(random);
         duration = System.currentTimeMillis() - startTime;
+        ao.printArray(random);
         if (duration < 10000) {
             System.out.println("Taulukon järjestäminen kesti " + duration + " millisekuntia\n\n");
         } else {
@@ -118,6 +131,7 @@ public class Tiralabra {
         startTime = System.currentTimeMillis();
         qs.iterative2(random, 0, random.length-1);
         duration = System.currentTimeMillis() - startTime;
+        ao.printArray(random);
         if (duration < 10000) {
             System.out.println("Taulukon järjestäminen kesti " + duration + " millisekuntia\n\n");
         } else {
