@@ -9,7 +9,7 @@ public class Tiralabra {
         //alustetaan luokat ja muuttujat
         InsertionSort is = new InsertionSort();
         Heap hp = new Heap();
-        QuickSort qs = new QuickSort();
+        Quicksort qs = new Quicksort();
         ArrayOperations ao = new ArrayOperations();
         Scanner s = new Scanner(System.in);
         long startTime;

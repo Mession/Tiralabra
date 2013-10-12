@@ -1,8 +1,17 @@
 
 package tiralabra;
 
+// Optimoitu järjestäminen käyttäen pika- ja lisäysjärjestämisen hybridiä
+// Aikavaativuus pahimmassa tapauksessa O(n^2), mutta keskimäärin O(n log n)
+// Parhaassa tapauksessa aikavaativuus voi nyt olla O(n), jos taulukon koko on 150 alkiota tai alle, ja ne ovat jo valmiiksi järjestyksessä
+// Tilavaativuus on korkeintaan O(log n)
+
 public class OptimizedSort {
     // Quicksort jos taulukon koko on vähintään 150 alkiota, muuten Insertion sort
+    
+    public int[] sort(int[] array) {
+        return quicksort(array, 0, array.length-1);
+    }
     
     public int[] quicksort(int[] array, int left, int right) {
         if (right - left < 150) {

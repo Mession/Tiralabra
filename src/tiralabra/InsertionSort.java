@@ -1,8 +1,10 @@
 
 package tiralabra;
 
+// Lisäysjärjestäminen
+// Aikavaativuus on keskimäärin ja pahimmassa tapauksessa O(n^2). Parhaassa tapauksessa se on O(n). 
+// Tilavaativuus on aina O(1)
 public class InsertionSort {
-    // Lisäysjärjestäminen
     
     public int[] sort(int[] array) {
         for (int i = 1; i < array.length; i++) {

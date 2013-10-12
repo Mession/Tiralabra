@@ -1,7 +1,10 @@
 
 package tiralabra;
 
-public class QuickSort {
+// Pikajärjestäminen
+// Aikavaativuus on keskimäärin ja parhaassa tapauksessa O(n log n). Pahimmassa tapauksessa aikavaativuus on O(n^2).
+// Tilavaativuus on korkeintaan O(log n)
+public class Quicksort {
     
     
     // Naiivi Quicksort, joka ei toteuta tilavaatimusta O(log n)

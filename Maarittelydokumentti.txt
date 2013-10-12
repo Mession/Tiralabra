@@ -1,12 +1,23 @@
 M‰‰rittelydokumentti:
 
-Vertailen kolmea j‰rjest‰misalgoritmia.
-1. Algoritmi on Insertion sort. Insertion sortin aikavaativuuden tulisi optimaalisesti olla O(n^2) ja tilavaativuuden O(1).
-2. Algoritmi on Heap-sort. Heap-sortin aikavaativuuden tulisi optimaalisesti olla O(n log n) ja tilavaativuus O(1).
+Vertailen nelj‰‰ j‰rjest‰misalgoritmia.
+
+1. Algoritmi on Insertion sort. Insertion sortin aikavaativuuden tulisi optimaalisesti olla O(n^2) ja tilavaativuuden O(1). Algoritmini toteuttaa sek‰ aika-
+ett‰ tilavaativuuden.
+
+2. Algoritmi on Heapsort. Heapsortin aikavaativuuden tulisi optimaalisesti olla O(n log n) ja tilavaativuus O(1). Algoritmini toteuttaa sek‰ aika-
+ett‰ tilavaativuuden.
+
 3. Algoritmi on Quicksort. Quicksortin aikavaativuuden tulisi optimaalisesti olla keskim‰‰rin O(n log n), tosin pahimman tapauksen aikavaativuus on O(n^2).
-Quicksortin optimaalinen tilavaativuus on O(log n).
+Quicksortin optimaalinen tilavaativuus on O(log n). Algoritmini toteuttaa sek‰ aika- ett‰ tilavaativuuden.
+
+4. Algoritmi on hybridi Quicksortista ja Insertion sortista. Keskim‰‰r‰inen aikavaativuus on O(n log n), pahin tapaus O(n^2) s‰ilyy, mutta
+paras tapaus on nyt O(n) (jos Quicksorttia ei k‰ytet‰ ollenkaan taulukon ollessa tarpeeksi pieni, jolloin paras tapaus on sama kuin Insertion sortissa).
+Tilavaativuus on Quicksortin k‰ytt‰misest‰ seuraavan rekursiopinon takia O(log n).
+
 
 L‰hteet:
-Insertion Sort		http://en.wikipedia.org/wiki/Insertion_sort
-Heap sort		http://en.wikipedia.org/wiki/Heap_sort
-Quick sort		Sivut 388-403 Tietorakenteet ja algoritmit kurssimoniste - http://www.cs.helsinki.fi/u/floreen/tira2013/tira.pdf
+Insertion sort		http://en.wikipedia.org/wiki/Insertion_sort
+Heapsort		http://en.wikipedia.org/wiki/Heapsort
+Quicksort		Sivut 388-403 Tietorakenteet ja algoritmit kurssimoniste - http://www.cs.helsinki.fi/u/floreen/tira2013/tira.pdf
+Hybridiin Insertion sortin ja Quicksortin l‰hteet (erityisesti sivu 403 Quicksort pdf:st‰)

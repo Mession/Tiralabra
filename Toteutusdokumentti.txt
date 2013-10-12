@@ -1,0 +1,110 @@
+Toteutusdokumentti:
+
+Insertion sort:
+Aikavaativuus O(n^2) toteutuu. Perustelu koodiani käyttäen:
+
+1.      for (int i = 1; i < array.length; i++) {
+2.          int valueAtIndex = array[i];
+3.          int index = i;
+4.          
+5.          while (index > 0 && valueAtIndex < array[index - 1]) {
+6.              array[index] = array[index - 1];
+7.              index--;
+8.          }
+9.          
+10.         array[index] = valueAtIndex;
+11.     }
+12.     return array;
+
+Alla n = alkioiden määrä.
+
+Algoritmin toiminta perustuu siihen, että jokainen alkio kuljetetaan oikealle paikalleen taulukossa.
+
+Jos alkiot ovat jo järjestyksessä, ei rivillä 5 alkavaan while-looppiin ikinä jouduta, joten aikavaativuus on O(n) rivin 1 for-loopin takia.
+
+Jos taas alkiot ovat "mahdollisimman huonosti", joudutaan vertailuja (rivi 5 ehto) tekemään 1 + 2 + 3 + ... + n-1 = (n-1)(n)/2 = O(n^2) kertaa.
+
+Tämä sen takia, että indeksissä 1 olevaa alkiota verrataan yhteen muuhun alkioon, eli indeksissä 0 olevaan.
+
+Indeksissä 2 olevaa alkiota joudutaan vertaamaan sekä indeksissä 1 että indeksissä 0 oleviin. 
+
+Tämä jatkuu muiden alkoiden kohdalla. 
+
+Viimeisessä (array.length-1) indeksissä olevaa alkiota joudutaan vertaamaan jokaiseen muuhun alkioon, eli n-1 alkioon.
+
+
+Tilavaativuus O(1) toteutuu selkeästi, sillä muuttujia on vakiomäärä.
+
+
+Heapsort:
+Tilavaativuus O(1) toteutuu selkeästi, sillä Heap -luokassani on vakiomäärä muuttujia.
+
+Aikavaativuus O(n log n) toteutuu. Perustelu:
+
+Heapify-operaation suoritusaika riippuu puun korkeudesta. Koska keko on lähes täydellinen binääripuu (jokaisella solmulla on korkeintaan kaksi lasta),
+heapify:n aikavaativuus on O(log n), sillä n alkioisen binääripuun korkeus on log n. Heapify vertaa aina vanhempaa ja tämän lapsia, joista suurin
+"nostetaan" vanhemmaksi, ja tätä tehdään korkeintaan lehdestä juureen asti, siis nyt log n kertaa.
+
+buildHeap metodissa kutsutaan heapify n/2 kertaa. Siis aikaa kuluu 0.5n * log n = O(n log n).
+
+Itse heapSortissa kutsutaan aluksi buildHeap (aikavaativuus nyt O(n log n)). Tämän jälkeen suoritetaan heapify n-1 kertaa, siis myös heapSortissa olevan
+for-loopin aikavaativuus on O(n log n). Nyt aikavaativuus on 2 * (n log n) = O(n log n).
+
+Quicksort:
+Tilavaativuus on O(log n). Alla koodi perusteluja varten:
+
+1    public int[] iterative2(int[] array, int left, int right) {
+2        while (left < right) {
+3            int p = partition(array, left, right);
+4            if ((p - left) < (right - p)) {
+5                iterative2(array, left, p);
+6                left = p+1;
+7            } else {
+8                iterative2(array, p+1, right);
+9                right = p;
+10           }
+11       }
+12       return array;
+13   }
+
+Partition -metodin tilavaativuus on O(1), sillä siinä on vakiomäärä apumuuttujia. While loopin if else ehdossa varmistetaan, että rekursioon laitetaan
+lyhyempi taulukon kahdesta osasta, ja pidempi osa käsitellään iteratiivisesti. Pahin tapaus on siis, jos taulukko jaetaan tasan. Tällöin rekursioyhtälö on:
+S(1) = c
+S(n) <= S(n/2) + c
+Jotta toteutusdokumentista ei tulisi järjettömän pitkä, en nyt ratkaise tässä yhtälöä (ratkaisun voi katsoa esim. 
+http://www.cs.helsinki.fi/u/floreen/tira2013/tira.pdf	sivu 84-87). Tulos on kuitenkin se, että tilavaativuudesta tulee O(log n).
+
+Aikavaativuus on pahimmassa tapauksessa O(n^2). Tämä tapahtuu silloin, jos jakoalkio valitaan huonosti, ja partiton jakaa taulukon aina sellaisiin osiin,
+joista toisen koko on 1. Kuitenkin keskimäärin (ja parhaassa tapauksessa) aikavaativuus on O(n log n), jos partition jakaa taulukon suunnilleen saman 
+kokoisiin osiin. Tämä johtuu siitä, että pahin tapaus on käytännössä erittäin harvinainen.
+
+Optimized sort:
+Tilavaativuus on O(log n), sillä käytetään quicksorttia. Aikavaativuudet ovat samat kuin quicksortissa, paitsi nyt paras tapaus on O(n), jos
+taulukon koko on alle 150 alkiota, jolloin käytetään vain Insertion sorttia.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
