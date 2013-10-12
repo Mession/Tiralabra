@@ -16,10 +16,14 @@ public class Tiralabra {
         long duration;
         
         OptimizedSort os = new OptimizedSort();
-        int[] testi = ao.initialiseRandomArray(100000, 100000);
+        int[] testi = ao.initialiseRandomArray(100, 100);
+        ao.printArray(testi);
+        System.out.println();
         startTime = System.currentTimeMillis();
-        os.quicksort(testi, 0, testi.length-1);
+        //os.quicksort(testi, 0, testi.length-1);
+        hp.heapSort(testi);
         duration = System.currentTimeMillis() - startTime;
+        ao.printArray(testi);
         if (duration < 10000) {
             System.out.println("Taulukon järjestäminen kesti " + duration + " millisekuntia\n\n");
         } else {

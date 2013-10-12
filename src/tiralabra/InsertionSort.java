@@ -2,6 +2,7 @@
 package tiralabra;
 
 public class InsertionSort {
+    // Lisäysjärjestäminen
     
     public int[] sort(int[] array) {
         for (int i = 1; i < array.length; i++) {

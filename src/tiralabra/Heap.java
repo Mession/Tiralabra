@@ -1,60 +1,66 @@
 
 package tiralabra;
 
+// Maksimikeko ja sen avulla järjestäminen
+// Aikavaativuus on O(n log n) niin pahimmassa, parhaassa kuin keskimääräisessä tapauksessa
+// Tilavaativuus on O(1), eli algoritmi toimii vakiotilassa
 public class Heap {
-    private int[] heap;
     private int heapsize;
     
+    // Järjestäminen käyttäen kekoa
     public int[] heapSort(int[] array) {
         buildHeap(array);
         for (int i = array.length-1; i > 0; i--) {
-            int temp = heap[0];
-            heap[0] = heap[i];
-            heap[i] = temp;
+            int temp = array[0];
+            array[0] = array[i];
+            array[i] = temp;
             heapsize--;
-            //heapify(0);
-            heapifyIterative(0);
+            heapifyIterative(0, array);
         }
         return array;
     }
     
+    // Muuttaa parametrina annetun taulukon kekomuotoon
     public void buildHeap(int[] array) {
         heapsize = array.length;
-        heap = array;
         for (int i = array.length/2; i >= 0; i--) {
-            //heapify(i);
-            heapifyIterative(i);
+            heapifyIterative(i, array);
         }
     }
     
+    // Palauttaa indeksissä i olevan alkion vanhemman indeksin
     public int parent(int i) {
         return i/2;
     }
     
+    // Palauttaa indeksissä i olevan alkion vasemman lapsen
     public int leftChild(int i) {
         return 2*i;
     }
     
+    // Palauttaa indeksissä i olevan alkion oikean lapsen
     public int rightChild(int i) {
         return 2*i+1;
     }
     
-    public void heapifyIterative(int i) {
+    // Iteratiivinen heapify operaatio, jolla taulukon kekomuotoisuus säilytetään kekoa muutettaessa
+    // Iteratiivisuus on tarpeen, jotta kekojärjestämisen tilavaativuus on O(1)
+    public void heapifyIterative(int i, int[] array) {
         int l = leftChild(i);
         int r = rightChild(i);
         int largest;
         while (l <= heapsize-1) {
             largest = i;
-            if (heap[l] > heap[i]) {
+            if (array[l] > array[i]) {
                 largest = l;
             }
-            if (r <= heapsize-1 && heap[r] > heap[largest]) {
+            if (r <= heapsize-1 && array[r] > array[largest]) {
                 largest = r;
             }
             if (largest != i) {
-                int temp = heap[i];
-                heap[i] = heap[largest];
-                heap[largest] = temp;
+                int temp = array[i];
+                array[i] = array[largest];
+                array[largest] = temp;
                 i = largest;
                 l = leftChild(i);
                 r = rightChild(i);
@@ -65,36 +71,37 @@ public class Heap {
             }
         }
     }
-       
-    public void heapify(int i) {
+    
+    // Rekursiivinen heapify operaatio, jota käytettäessä optimaalinen tilavaativuus ei toteudu rekursiopinon takia
+    public void heapify(int i, int[] array) {
         int l = leftChild(i);
         int r = rightChild(i);
         int largest;
         if (r <= heapsize-1) {
-            if (heap[l] > heap[r]) {
+            if (array[l] > array[r]) {
                 largest = l;
             } else {
                 largest = r;
             }
-            if (heap[i] < heap[largest]) {
-                int temp = heap[i];
-                heap[i] = heap[largest];
-                heap[largest] = temp;
-                heapify(largest);
+            if (array[i] < array[largest]) {
+                int temp = array[i];
+                array[i] = array[largest];
+                array[largest] = temp;
+                heapify(largest, array);
             }
-        } else if (l == heapsize-1 && heap[i] < heap[l]) {
-            int temp = heap[i];
-            heap[i] = heap[l];
-            heap[l] = temp;
+        } else if (l == heapsize-1 && array[i] < array[l]) {
+            int temp = array[i];
+            array[i] = array[l];
+            array[l] = temp;
         }
     }
     
-    public int heapDelMax() {
-        int max = heap[0];
-        heap[0] = heap[heapsize-1];
+    // Poistaa ja palauttaa keon suurimman alkion
+    public int heapDelMax(int[] array) {
+        int max = array[0];
+        array[0] = array[heapsize-1];
         heapsize--;
-        //heapify(0);
-        heapifyIterative(0);
+        heapifyIterative(0, array);
         return max;
     }
 }

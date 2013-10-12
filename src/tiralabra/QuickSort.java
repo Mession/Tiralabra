@@ -3,6 +3,8 @@ package tiralabra;
 
 public class QuickSort {
     
+    
+    // Naiivi Quicksort, joka ei toteuta tilavaatimusta O(log n)
     public int[] quicksort(int[] array, int left, int right) {
         if (left < right) {
             int p = partition(array, left, right);
@@ -12,6 +14,7 @@ public class QuickSort {
         return array;
     }
     
+    // Parempaan päin, nyt todennäköisemmin toteuttaa tilavaativuuden
     public int[] iterative(int[] array, int left, int right) {
         while (left < right) {
             int p = partition(array, left, right);
@@ -21,6 +24,7 @@ public class QuickSort {
         return array;
     }
     
+    // Ja nyt toteuttaa tilavaativuuden, sillä pidempi taulukoista käydään iteratiivisesti läpi
     public int[] iterative2(int[] array, int left, int right) {
         while (left < right) {
             int p = partition(array, left, right);
@@ -35,7 +39,9 @@ public class QuickSort {
         return array;
     }
     
+    // Jaetaan taulukko kahteen osaan, toisessa on jakoalkiota (alla muuttuja p) pienemmät ja toisessa sitä suuremmat alkiot
     public int partition(int[] array, int left, int right) {
+        // Tässä jakoalkio perinteinen array[left], parempiakin vaihtoehtoja on (kuten luokassa OptimizedSort)
         int p = array[left];
         int i = left-1;
         int j = right+1;
