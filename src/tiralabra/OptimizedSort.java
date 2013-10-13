@@ -14,11 +14,14 @@ public class OptimizedSort {
     }
     
     public int[] quicksort(int[] array, int left, int right) {
+        
         if (right - left < 150) {
             return insertionSort(array, left, right);
         }
+        
         while (left < right) {
             int p = partition(array, left, right);
+            
             if ((p - left) < (right - p)) {
                 quicksort(array, left, p);
                 left = p+1;
@@ -42,15 +45,18 @@ public class OptimizedSort {
         int p = pickPivot(array, left, right);
         int i = left-1;
         int j = right+1;
+        
         while (i < j) {
             i++;
             while (i < right && array[i] < p) {
                 i++;
             }
+            
             j--;
             while (j > left && array[j] > p) {
                 j--;
             }
+            
             if (i < j) {
                 int temp = array[i];
                 array[i] = array[j];

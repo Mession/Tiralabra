@@ -31,6 +31,7 @@ public class Quicksort {
     public int[] iterative2(int[] array, int left, int right) {
         while (left < right) {
             int p = partition(array, left, right);
+            
             if ((p - left) < (right - p)) {
                 iterative2(array, left, p);
                 left = p+1;
@@ -39,6 +40,7 @@ public class Quicksort {
                 right = p;
             }
         }
+        
         return array;
     }
     
@@ -53,15 +55,18 @@ public class Quicksort {
         int p = array[left];
         int i = left-1;
         int j = right+1;
+        
         while (i < j) {
             i++;
             while (i < right && array[i] < p) {
                 i++;
             }
+            
             j--;
             while (j > left && array[j] > p) {
                 j--;
             }
+            
             if (i < j) {
                 int temp = array[i];
                 array[i] = array[j];
