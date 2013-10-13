@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="1221013-JIMMS" name="OptimizedSortTest" tests="5" time="2.087" timestamp="2013-10-13T15:38:14">
+<testsuite errors="0" failures="0" hostname="1221013-JIMMS" name="OptimizedSortTest" tests="5" time="2.08" timestamp="2013-10-13T15:56:50">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="FI" />
@@ -62,7 +62,7 @@
     <property name="manifest.available+main.class" value="true" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner OptimizedSortTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\User\Documents\NetBeansProjects\Tiralabra\build\test\results\TEST-OptimizedSortTest.xml crashfile=C:\Users\User\Documents\NetBeansProjects\Tiralabra\build\junitvmwatcher3416388711085243512.properties propsfile=C:\Users\User\Documents\NetBeansProjects\Tiralabra\build\junit4658795533286235398.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner OptimizedSortTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\User\Documents\NetBeansProjects\Tiralabra\build\test\results\TEST-OptimizedSortTest.xml crashfile=C:\Users\User\Documents\NetBeansProjects\Tiralabra\build\junitvmwatcher2967429909354698978.properties propsfile=C:\Users\User\Documents\NetBeansProjects\Tiralabra\build\junit8265731607518323595.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -431,11 +431,11 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="C:\Program Files\NetBeans 7.3.1\enterprise\docs\javaee-doc-api.jar" />
   </properties>
-  <testcase classname="OptimizedSortTest" name="jarjestaa" time="0.002" />
-  <testcase classname="OptimizedSortTest" name="aikavaativuus1" time="0.023" />
-  <testcase classname="OptimizedSortTest" name="aikavaativuus2" time="1.842" />
-  <testcase classname="OptimizedSortTest" name="aikavaativuus3" time="0.167" />
-  <testcase classname="OptimizedSortTest" name="jarjestaaRandomin" time="0.009" />
+  <testcase classname="OptimizedSortTest" name="jarjestaaRandomin" time="0.019" />
+  <testcase classname="OptimizedSortTest" name="aikavaativuus1" time="0.014" />
+  <testcase classname="OptimizedSortTest" name="aikavaativuus2" time="1.84" />
+  <testcase classname="OptimizedSortTest" name="aikavaativuus3" time="0.165" />
+  <testcase classname="OptimizedSortTest" name="jarjestaa" time="0.0" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

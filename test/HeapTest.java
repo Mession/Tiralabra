@@ -73,7 +73,7 @@ public class HeapTest {
         assertTrue(duration2 > duration1);
     }
     
-    // Testaa, että kekojärjestäminen järjestää käänteisen taulukon (n, n-1, ..., 2, 1, 0) nopeammin kuin lisäysjärjestäminen
+    // Testaa, että kekojärjestäminen järjestää käänteisen taulukon (n-1, n-2, ..., 2, 1, 0) nopeammin kuin lisäysjärjestäminen
     @Test
     public void aikavaativuus2() {
         int[] testi = ao.reverseOrderArray(100000);

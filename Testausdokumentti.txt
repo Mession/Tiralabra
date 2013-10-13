@@ -1,0 +1,33 @@
+Testausdokumentti:
+Jokaista j‰rjest‰misalgoritmiluokkaa testataan automaattisilla JUnit testeill‰. N‰m‰ voi ajaa suoraan ainakin NetBeansissa.
+
+Testasin jokaista algoritmia parilla "perustestill‰", jotka tarkistivat, ett‰ algoritmi toimii oikein (eli j‰rjest‰‰ taulukon).
+T‰m‰n lis‰ksi testasin aikavaativuutta. Testasin jokaisella algoritmilla sen, ett‰ lyhyempi taulukko j‰rjestet‰‰n nopeammin kuin pitk‰.
+
+Lis‰ysj‰rjest‰misen aikavaativuutta testasin niin, ett‰ jos taulukko on jo valmiiksi j‰rjestyksess‰, lis‰ysj‰rjest‰minen toimii nopeammin kuin 
+optimoitu j‰rjest‰minen (eli lis‰ysj‰rjest‰misen paras tapaus on luokkaa O(n) vs optimoidun O(n log n) keskim‰‰r‰inen tapaus).
+
+Kekoj‰rjest‰misen aikavaativuutta testasin niin, ett‰ k‰‰nteisess‰ j‰rjestyksess‰ oleva taulukko (siis n-1, n-2, ..., 2, 1, 0) j‰rjestyy
+nopeammin kekoj‰rjest‰misell‰ kuin lis‰ysj‰rjest‰misell‰ (keolla tulisi kulua O(n log n) aikaa, lis‰yksell‰ O(n^2)). Testasin myˆs,
+ett‰ kekoj‰rjest‰minen j‰rjest‰‰ taulukon keskim‰‰rin nopeammin kuin lis‰ysj‰rjest‰minen.
+
+Pikaj‰rjest‰misen aikavaativuutta testasin k‰‰nteisess‰ j‰rjestyksess‰ olevalla taulukolla samalla tavoin kuin kekoj‰rjest‰misess‰. Testasin,
+ett‰ keskim‰‰rin pikaj‰rjest‰minen toimii nopeammin kuin kekoj‰rjest‰minen (vaikka molempien keskim‰‰r‰inen tapaus on O(n log n) luokkaa,
+pikaj‰rjest‰misen pit‰isi k‰yt‰nnˆss‰ olla nopeampi).
+
+Optimoitua j‰rjest‰mist‰ testasin samalla k‰‰nteisess‰ j‰rjestyksess‰ olevalla taulukolla kuin pika- ja kekoj‰rjest‰misess‰. Lis‰ksi testasin,
+ett‰ keskim‰‰rin optimoitu j‰rjest‰minen toimii nopeammin kuin pikaj‰rjest‰minen (pit‰isi toimia, sill‰ muuten optimoimisesta ei olisi ollut hyˆty‰,
+koska optimoitu perustuu pikaj‰rjest‰miseen).
+
+
+Testitulokset:
+Olen ajanut testit l‰pi useamman kerran, eik‰ t‰h‰n menness‰ ole tullut tapauksia, joilla testit eiv‰t olisi menneet l‰pi. T‰m‰ on kuitenkin teoriassa
+mahdollista, sill‰ osassa testej‰ on satunnaisia elementtej‰. Keskim‰‰r‰ist‰ aikavaativuutta tutkivissa testeiss‰ k‰ytt‰m‰ni n = 10 (eli otetaan
+keskiarvo 10 suorituskerrasta) voisi olla suurempi, sill‰ suurempi n-arvo antaisi tarkempaa tietoa. Kuitenkin testien suoritusaika nousee oleellisesti,
+jos vaihdetaan esim. n = 100, ja n = 10 n‰ytt‰isi riitt‰v‰n osoittamaan algoritmien aikavaativuutten eroja. Testien pohjalta algoritmieni aikavaativuudet
+ovat ainakin l‰hell‰ optimaalisia. Alla testien pohjalta saamani tulokset, hitain ensin:
+
+Lis‰ysj‰rjest‰minen < Kekoj‰rjest‰minen < Pikaj‰rjest‰minen < Optimaalinen j‰rjest‰minen
+
+siis tulokseni vastaavat netist‰ lˆyt‰mieni muiden vertailujen tuloksia. Myˆs keskim‰‰r‰isten aikavaativuuksien pohjalta tulokset n‰ytt‰isiv‰t oikeilta.
+

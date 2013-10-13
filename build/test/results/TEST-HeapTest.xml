@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="1221013-JIMMS" name="HeapTest" tests="5" time="12.516" timestamp="2013-10-13T15:37:58">
+<testsuite errors="0" failures="0" hostname="1221013-JIMMS" name="HeapTest" tests="5" time="12.544" timestamp="2013-10-13T15:56:33">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="FI" />
@@ -62,7 +62,7 @@
     <property name="manifest.available+main.class" value="true" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner HeapTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\User\Documents\NetBeansProjects\Tiralabra\build\test\results\TEST-HeapTest.xml crashfile=C:\Users\User\Documents\NetBeansProjects\Tiralabra\build\junitvmwatcher5222737213234918920.properties propsfile=C:\Users\User\Documents\NetBeansProjects\Tiralabra\build\junit3140606721979335889.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner HeapTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\User\Documents\NetBeansProjects\Tiralabra\build\test\results\TEST-HeapTest.xml crashfile=C:\Users\User\Documents\NetBeansProjects\Tiralabra\build\junitvmwatcher2341389727887133014.properties propsfile=C:\Users\User\Documents\NetBeansProjects\Tiralabra\build\junit7321322718095335063.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -432,9 +432,9 @@
     <property name="libs.javaee-web-api-7.0.javadoc" value="C:\Program Files\NetBeans 7.3.1\enterprise\docs\javaee-doc-api.jar" />
   </properties>
   <testcase classname="HeapTest" name="jarjestaaRandomin" time="0.028" />
-  <testcase classname="HeapTest" name="aikavaativuus1" time="0.021" />
-  <testcase classname="HeapTest" name="aikavaativuus2" time="1.836" />
-  <testcase classname="HeapTest" name="aikavaativuus3" time="10.587" />
+  <testcase classname="HeapTest" name="aikavaativuus1" time="0.017" />
+  <testcase classname="HeapTest" name="aikavaativuus2" time="1.863" />
+  <testcase classname="HeapTest" name="aikavaativuus3" time="10.591" />
   <testcase classname="HeapTest" name="jarjestaa" time="0.0" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
