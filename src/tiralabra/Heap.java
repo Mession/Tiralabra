@@ -20,6 +20,11 @@ public class Heap {
         return array;
     }
     
+    // Apumetodi, jotta jokaista järjestämisalgoritmia voitaisiin kutsua vain .sort
+    public int[] sort(int[] array) {
+        return heapSort(array);
+    }
+    
     // Muuttaa parametrina annetun taulukon kekomuotoon
     public void buildHeap(int[] array) {
         heapsize = array.length;

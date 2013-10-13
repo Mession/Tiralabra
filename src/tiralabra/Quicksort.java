@@ -42,6 +42,11 @@ public class Quicksort {
         return array;
     }
     
+    // Lopullinen metodi, jolle ei tarvitse erikseen antaa indeksejä
+    public int[] sort(int[] array) {
+        return iterative2(array, 0, array.length-1);
+    }
+    
     // Jaetaan taulukko kahteen osaan, toisessa on jakoalkiota (alla muuttuja p) pienemmät ja toisessa sitä suuremmat alkiot
     public int partition(int[] array, int left, int right) {
         // Tässä jakoalkio perinteinen array[left], parempiakin vaihtoehtoja on (kuten luokassa OptimizedSort)

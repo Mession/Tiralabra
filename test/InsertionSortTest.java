@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
 import java.util.Random;
 import org.junit.After;
@@ -16,10 +12,6 @@ import tiralabra.InsertionSort;
 import tiralabra.OptimizedSort;
 import tiralabra.Quicksort;
 
-/**
- *
- * @author User
- */
 public class InsertionSortTest {
     InsertionSort is;
     OptimizedSort os;
@@ -51,6 +43,7 @@ public class InsertionSortTest {
     public void tearDown() {
     }
     
+    // Testaa, järjestääkö yksinkertaisen taulukon oikein
     @Test
     public void jarjestaa() {
         int[] testi = {3, 5, 2, 4, 1};
@@ -61,8 +54,17 @@ public class InsertionSortTest {
         }
     }
     
+    // Testaa, järjestääkö sekalaisen taulukon oikein
     @Test
-    public void aikaVaativuus1() {
+    public void jarjestaaRandomin() {
+        int[] testi = ao.initialiseRandomArray(100000, 100000);
+        is.sort(testi);
+        assertTrue(ao.jarjestyksessa(testi));
+    }
+    
+    // Testaa, että lyhyempi taulukko järjestetään nopeammin kuin pitkä
+    @Test
+    public void aikavaativuus1() {
         Random rand = new Random();
         int r1 = rand.nextInt(50000);
         int r2 = rand.nextInt(50000)+100000;
@@ -77,8 +79,10 @@ public class InsertionSortTest {
         assertTrue(duration2 > duration1);
     }
     
+    // Testaa, että jo järjestyksessä oleva taulukko järjestetään lisäysjärjestämisellä 
+    // nopeammin kuin optimoidulla järjestämisalgoritmilla
     @Test
-    public void aikaVaativuus2() {
+    public void aikavaativuus2() {
         int[] testi = ao.initialiseOrderedArray(100000);
         long startTime = System.currentTimeMillis();
         is.sort(testi);

@@ -37,6 +37,7 @@ public class HeapTest {
     public void tearDown() {
     }
     
+    // Testaa, järjestääkö yksinkertaisen taulukon oikein
     @Test
     public void jarjestaa() {
         int[] testi = {3, 5, 2, 4, 1};
@@ -47,8 +48,17 @@ public class HeapTest {
         }
     }
     
+    // Testaa, järjestääkö sekalaisen taulukon oikein
     @Test
-    public void aikaVaativuus1() {
+    public void jarjestaaRandomin() {
+        int[] testi = ao.initialiseRandomArray(100000, 100000);
+        hp.heapSort(testi);
+        assertTrue(ao.jarjestyksessa(testi));
+    }
+    
+    // Testaa, että lyhyempi taulukko järjestetään nopeammin kuin pitkä
+    @Test
+    public void aikavaativuus1() {
         Random rand = new Random();
         int r1 = rand.nextInt(50000);
         int r2 = rand.nextInt(50000)+100000;
@@ -63,8 +73,9 @@ public class HeapTest {
         assertTrue(duration2 > duration1);
     }
     
+    // Testaa, että kekojärjestäminen järjestää käänteisen taulukon (n, n-1, ..., 2, 1, 0) nopeammin kuin lisäysjärjestäminen
     @Test
-    public void aikaVaativuus2() {
+    public void aikavaativuus2() {
         int[] testi = ao.reverseOrderArray(100000);
         long startTime = System.currentTimeMillis();
         hp.heapSort(testi);
@@ -74,5 +85,31 @@ public class HeapTest {
         is.sort(testi);
         long duration2 = System.currentTimeMillis() - startTime;
         assertTrue(duration2 > duration1);
+    }
+    
+    // Testaa, että kekojärjestämisellä kestää järjestämisessä keskimäärin vähemmän aikaa
+    // kuin lisäysjärjestämisellä
+    @Test
+    public void aikavaativuus3() {
+        int n = 10;
+        long hpAverage = 0;
+        for (int i = 0; i < n; i++) {
+            int[] testi = ao.initialiseRandomArray(100000, 100000);
+            long startTime = System.currentTimeMillis();
+            hp.sort(testi);
+            long duration = System.currentTimeMillis() - startTime;
+            hpAverage += duration;
+        }
+        hpAverage /= n;
+        long isAverage = 0;
+        for (int i = 0; i < n; i++) {
+            int[] testi = ao.initialiseRandomArray(100000, 100000);
+            long startTime = System.currentTimeMillis();
+            is.sort(testi);
+            long duration = System.currentTimeMillis() - startTime;
+            isAverage += duration;
+        }
+        isAverage /= n;
+        assertTrue(isAverage > hpAverage);
     }
 }

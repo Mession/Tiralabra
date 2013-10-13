@@ -55,4 +55,13 @@ public class ArrayOperations {
         }
         return array;
     }
+    
+    public boolean jarjestyksessa(int[] array) {
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < array[i-1]) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
