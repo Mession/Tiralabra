@@ -86,7 +86,9 @@ taulukon koko on alle 150 alkiota, jolloin käytetään vain Insertion sorttia.
 
 
 
-
+Työni puutteet liittyvät dokumentaatioon. Aloitin tekemisen hiukan liian myöhässä, joten toteutusdokumentti ja testausdokumentti jäivät puutteellisiksi
+verrattuna kurssisivun vaatimuksiin. Itse algoritmit onneksi sain tehtyä melko hyvin ja ne tuntuvat toimivan. Automaattisten testienkin tekemisen aloitin 
+liian myöhään, mutta muistin mielestäni testata oleellisimmat asiat algoritmien toimivuudesta.
 
 
 

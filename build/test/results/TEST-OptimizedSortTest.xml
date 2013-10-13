@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="1221013-JIMMS" name="OptimizedSortTest" tests="5" time="2.08" timestamp="2013-10-13T15:56:50">
+<testsuite errors="0" failures="0" hostname="1221013-JIMMS" name="OptimizedSortTest" tests="5" time="2.063" timestamp="2013-10-13T16:36:41">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="FI" />
@@ -62,7 +62,7 @@
     <property name="manifest.available+main.class" value="true" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner OptimizedSortTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\User\Documents\NetBeansProjects\Tiralabra\build\test\results\TEST-OptimizedSortTest.xml crashfile=C:\Users\User\Documents\NetBeansProjects\Tiralabra\build\junitvmwatcher2967429909354698978.properties propsfile=C:\Users\User\Documents\NetBeansProjects\Tiralabra\build\junit8265731607518323595.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner OptimizedSortTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\User\Documents\NetBeansProjects\Tiralabra\build\test\results\TEST-OptimizedSortTest.xml crashfile=C:\Users\User\Documents\NetBeansProjects\Tiralabra\build\junitvmwatcher7221115617472937319.properties propsfile=C:\Users\User\Documents\NetBeansProjects\Tiralabra\build\junit906506561021145767.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -259,6 +259,7 @@
     <property name="meta.inf.dir" value="src/META-INF" />
     <property name="javadoc.encoding.used" value="UTF-8" />
     <property name="dist.jar" value="dist/Tiralabra.jar" />
+    <property name="netbeans.automatic.build" value="true" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
     <property name="ant.project.name" value="Tiralabra" />
     <property name="netbeans.hash.code" value="unique=NB_CND_GFMOD_GROOVY_JAVA_JC_MOB_PHP_WEBCOMMON_WEBEE078822b41-d1f3-4fac-bc91-d311671e34ee_37e075ae-56a9-4a51-985e-1804095c0a60" />
@@ -288,10 +289,10 @@
     <property name="libs.cdc-agui-swing-layout.javadoc" value="" />
     <property name="java.specification.vendor" value="Oracle Corporation" />
     <property name="libs.javac-api.classpath" value="C:\Program Files\NetBeans 7.3.1\java\modules\ext\nb-javac-api.jar" />
-    <property name="libs.nokiaS80-ant-utils.classpath" value="C:\Program Files\NetBeans 7.3.1\mobility\modules\ext\org-netbeans-modules-j2me-cdc-project-nokiaS80.jar" />
     <property name="java.version" value="1.7.0_25" />
-    <property name="run.jvmargs.ide" value="" />
+    <property name="libs.nokiaS80-ant-utils.classpath" value="C:\Program Files\NetBeans 7.3.1\mobility\modules\ext\org-netbeans-modules-j2me-cdc-project-nokiaS80.jar" />
     <property name="javadoc.version" value="false" />
+    <property name="run.jvmargs.ide" value="" />
     <property name="libs.MySQLDriver.javadoc" value="" />
     <property name="org.openide.version" value="deprecated" />
     <property name="source.encoding" value="UTF-8" />
@@ -318,11 +319,11 @@
     <property name="libs.restlib.src" value="" />
     <property name="javac.source" value="1.7" />
     <property name="build.generated.dir" value="build/generated" />
-    <property name="libs.hibernate-persistence.src" value="" />
     <property name="line.separator" value="&#xd;&#xa;" />
+    <property name="libs.hibernate-persistence.src" value="" />
     <property name="java.specification.version" value="1.7" />
-    <property name="java.vm.info" value="mixed mode" />
     <property name="libs.jaxws21.maven-pom" value="" />
+    <property name="java.vm.info" value="mixed mode" />
     <property name="libs.cdc-ant-utils.javadoc" value="" />
     <property name="nb.junit.batch" value="true" />
     <property name="junit.forkmode" value="perTest" />
@@ -333,8 +334,8 @@
     <property name="built-jar.properties" value="C:\Users\User\Documents\NetBeansProjects\Tiralabra\build\built-jar.properties" />
     <property name="build.test.classes.dir" value="build/test/classes" />
     <property name="src.dir" value="src" />
-    <property name="annotation.processing.enabled" value="true" />
     <property name="sun.awt.keepWorkingSetOnMinimize" value="true" />
+    <property name="annotation.processing.enabled" value="true" />
     <property name="libs.jsf20.src" value="" />
     <property name="libs.jpa20-persistence.src" value="" />
     <property name="libs.jsf12.src" value="" />
@@ -353,8 +354,8 @@
     <property name="libs.groovy-all.classpath" value="C:\Program Files\NetBeans 7.3.1\groovy\modules\ext\groovy-all.jar" />
     <property name="javac.fork" value="false" />
     <property name="libs.sjmc-ant-utils.classpath" value="C:\Program Files\NetBeans 7.3.1\mobility\modules\ext\org-netbeans-modules-j2me-cdc-project-sjmc.jar" />
-    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
     <property name="libs.JMUnit4CLDC10.classpath" value="C:\Program Files\NetBeans 7.3.1\mobility\modules\ext\jmunit4cldc10-1.2.1.jar" />
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
     <property name="default.javac.source" value="1.7" />
     <property name="debug-transport-by-os" value="dt_shmem" />
     <property name="sun.jnu.encoding" value="Cp1252" />
@@ -391,9 +392,9 @@
     <property name="os.version" value="6.1" />
     <property name="application.args" value="" />
     <property name="libs.javaee-api-7.0.maven-pom" value="" />
-    <property name="libs.JMUnit4CLDC11.maven-pom" value="" />
     <property name="main.class.available" value="true" />
     <property name="sun.awt.enableExtraMouseButtons" value="true" />
+    <property name="libs.JMUnit4CLDC11.maven-pom" value="" />
     <property name="sun.desktop" value="windows" />
     <property name="ant.file.type.Tiralabra-impl" value="file" />
     <property name="libs.restlib.javadoc" value="C:\Program Files\NetBeans 7.3.1\enterprise\docs\jersey-1.13-javadoc.zip;C:\Program Files\NetBeans 7.3.1\enterprise\docs\jersey-apache-client-1.13-javadoc.zip;C:\Program Files\NetBeans 7.3.1\enterprise\docs\jersey-atom-abdera-1.13-javadoc.zip;C:\Program Files\NetBeans 7.3.1\enterprise\docs\jersey-guice-1.13-javadoc.zip;C:\Program Files\NetBeans 7.3.1\enterprise\docs\jersey-multipart-1.13-javadoc.zip;C:\Program Files\NetBeans 7.3.1\enterprise\docs\jersey-simple-server-1.13-javadoc.zip;C:\Program Files\NetBeans 7.3.1\enterprise\docs\jersey-spring-1.13-javadoc.zip;C:\Program Files\NetBeans 7.3.1\enterprise\docs\oauth-client-1.13-javadoc.zip;C:\Program Files\NetBeans 7.3.1\enterprise\docs\oauth-server-1.13-javadoc.zip;C:\Program Files\NetBeans 7.3.1\enterprise\docs\oauth-signature-1.13-javadoc.zip" />
@@ -410,8 +411,8 @@
     <property name="libs.spring-webmvc.maven-pom" value="" />
     <property name="run.jvmargs" value="" />
     <property name="libs.ejb3-persistence.classpath" value="C:\Program Files\NetBeans 7.3.1\java\modules\ext\hibernate\ejb3-persistence.jar" />
-    <property name="libs.JAXB-ENDORSED.src" value="" />
     <property name="libs.spring-framework.javadoc" value="" />
+    <property name="libs.JAXB-ENDORSED.src" value="" />
     <property name="libs.testng.javadoc" value="C:\Program Files\NetBeans 7.3.1\platform\docs\testng-6.5.1-javadoc.zip" />
     <property name="libs.PostgreSQLDriver.classpath" value="C:\Program Files\NetBeans 7.3.1\ide\modules\ext\postgresql-9.2-1002.jdbc4.jar" />
     <property name="user.script" value="" />
@@ -425,17 +426,17 @@
     <property name="ant.version" value="Apache Ant(TM) version 1.8.4 compiled on May 22 2012" />
     <property name="file.encoding" value="Cp1252" />
     <property name="build.classes.excludes" value="**/*.java,**/*.form" />
-    <property name="javadoc.nonavbar" value="false" />
     <property name="jdkBug6558476" value="false" />
+    <property name="javadoc.nonavbar" value="false" />
     <property name="platform.active" value="default_platform" />
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="C:\Program Files\NetBeans 7.3.1\enterprise\docs\javaee-doc-api.jar" />
   </properties>
   <testcase classname="OptimizedSortTest" name="jarjestaaRandomin" time="0.019" />
-  <testcase classname="OptimizedSortTest" name="aikavaativuus1" time="0.014" />
-  <testcase classname="OptimizedSortTest" name="aikavaativuus2" time="1.84" />
-  <testcase classname="OptimizedSortTest" name="aikavaativuus3" time="0.165" />
   <testcase classname="OptimizedSortTest" name="jarjestaa" time="0.0" />
+  <testcase classname="OptimizedSortTest" name="aikavaativuus1" time="0.016" />
+  <testcase classname="OptimizedSortTest" name="aikavaativuus2" time="1.818" />
+  <testcase classname="OptimizedSortTest" name="aikavaativuus3" time="0.167" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
