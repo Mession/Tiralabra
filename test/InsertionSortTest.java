@@ -81,6 +81,7 @@ public class InsertionSortTest {
     
     // Testaa, että jo järjestyksessä oleva taulukko järjestetään lisäysjärjestämisellä 
     // nopeammin kuin optimoidulla järjestämisalgoritmilla
+    // Paras tapaus O(n) vs keskimääräinen O(n log n)
     @Test
     public void aikavaativuus2() {
         int[] testi = ao.initialiseOrderedArray(100000);

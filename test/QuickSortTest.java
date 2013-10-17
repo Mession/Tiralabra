@@ -78,14 +78,14 @@ public class QuickSortTest {
     }
     
     // Testaa, että pikajärjestäminen toimii nopeammin kuin lisäysjärjestäminen silloin, jos
-    // taulukko on käänteisessä järjestyksessä
+    // taulukko on satunnaisessa järjestyksessä (keskimääräiset O(n log n) vs O(n^2)
     @Test
     public void aikavaativuus2() {
-        int[] testi = ao.reverseOrderArray(100000);
+        int[] testi = ao.initialiseRandomArray(100000, 100000);
         long startTime = System.currentTimeMillis();
         qs.sort(testi);
         long duration1 = System.currentTimeMillis() - startTime;
-        testi = ao.reverseOrderArray(100000);
+        testi = ao.initialiseRandomArray(100000, 100000);
         startTime = System.currentTimeMillis();
         is.sort(testi);
         long duration2 = System.currentTimeMillis() - startTime;

@@ -74,6 +74,7 @@ public class HeapTest {
     }
     
     // Testaa, että kekojärjestäminen järjestää käänteisen taulukon (n-1, n-2, ..., 2, 1, 0) nopeammin kuin lisäysjärjestäminen
+    // keskimääräinen O(n log n) vs pahin tapaus O(n^2)
     @Test
     public void aikavaativuus2() {
         int[] testi = ao.reverseOrderArray(100000);
@@ -88,7 +89,7 @@ public class HeapTest {
     }
     
     // Testaa, että kekojärjestämisellä kestää järjestämisessä keskimäärin vähemmän aikaa
-    // kuin lisäysjärjestämisellä
+    // kuin lisäysjärjestämisellä (keskimääräinen O(n log n) vs keskimääräinen O(n^2)
     @Test
     public void aikavaativuus3() {
         int n = 10;
